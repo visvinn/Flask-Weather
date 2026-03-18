@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flask Weather</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Flask Weather</h1>
+            </div>
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            {% if weather %}
+            <div class="weather-card">
+                <h2>{{ weather.location.name }}, {{ weather.location.country }}</h2>
+                <p>{{ weather.location.localtime }}</p>
+                <img src="https:{{ weather.current.condition.icon }}" alt="weather icon">
+                <h1>{{ weather.current.temp_c }}°C</h1>
+                <p>{{ weather.current.condition.text }}</p>
+            </div>
+            {% endif %}
+            {% if not weather %}
+            <p style="color:#aaa;">Search for a city to see weather</p>
+            {% endif %}
+            <div class="input">
+                <form method="POST">
+                    <input type="text" name="city" placeholder="Enter City">
+                    <button type="submit">Get Weather</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

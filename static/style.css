@@ -1,0 +1,92 @@
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SOURCE: https://www.reddit.com/answers/8d5120f3-7b8b-4add-af02-da74d7f280d2/?q=Flexbox+centering+div&source=SERP&upstreamCID=223370e0-003a-44d9-99e8-ecca8be12bc3&upstreamIID=314e5b17-a357-4fb1-824a-3de508c080b5&upstreamQ=Flexbox+centering+div&upstreamQID=76faab83-47b9-4917-94cc-d9d85716961a */
+.title {
+    font-family: "Poiret One", sans-serif;
+    color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 25px;
+}
+
+.weather-card {
+    background-color: #F2F2F2;
+    color: #383838;
+    padding: 25px;
+    border-radius: 18px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.weather-card h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.input form {
+    display: flex;
+    gap: 10px;
+}
+
+.input input {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    width: 250px;
+    background-color: #F2F2F2;
+    color: #383838;
+    transition: 0.3s ease;
+}
+
+/* Placeholder Color*/
+.input input::placeholder {
+    color: #383838;
+}
+
+/* Focus Effect */
+.input input:focus {
+    box-shadow: 0 0 0 2px #CDBE78;
+}
+
+/* Button Style */
+.input button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #CDBE78;
+    color: #383838;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* hover effect */
+.input button:hover {
+    background-color: #066163;
+}
+
+body {
+    font-family: "Poiret One", sans-serif;
+    background-color: #383838;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
