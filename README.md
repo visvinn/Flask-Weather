@@ -1,17 +1,22 @@
 # Flask Weather App 🌤
 
-A clean and minimal weather web application built using Flask and WeatherAPI.
-Users can search for any city and get real-time weather data.
+A simple weather web app built with Flask and WeatherAPI.
+Users can search any city to get real-time weather data.
+
+---
+
+## 🌐 Live Demo
+
+https://flask-weather-v79n.onrender.com
 
 ---
 
 ## 🚀 Features
 
-* Search weather by city name
-* Displays temperature and weather condition
-* Shows weather icon
-* Input validation (handles empty input)
-* Error handling for invalid city names
+* Search weather by city
+* Displays temperature, condition, and icon
+* Input validation and error handling
+* Clean centered UI
 
 ---
 
@@ -20,39 +25,41 @@ Users can search for any city and get real-time weather data.
 * Python (Flask)
 * HTML / CSS
 * WeatherAPI
-* Requests library
+* Requests
 
 ---
 
-## 📦 Setup Instructions
+## 📦 Setup
 
-1. Clone the repository
-
+```bash
 git clone https://github.com/visvinn/Flask-Weather.git
 cd Flask-Weather
+```
 
-2. Create a `.env` file in the root directory:
+Create `.env`:
 
+```text
 WEATHER_API_KEY=your_api_key_here
+```
 
-3. Install dependencies:
+Install & run:
 
+```bash
 pip install -r requirements.txt
-
-4. Run the application:
-
 python app.py
-
-5. Open in browser:
-
-http://127.0.0.1:5000
+```
 
 ---
 
 ## ⚠️ Notes
 
-* This project uses the free tier of WeatherAPI
-* API key is stored securely using environment variables
+* Uses free tier of WeatherAPI
+* API key is stored via environment variables
+* For local development, you can enable debug mode:
+
+```python
+app.run(debug=True)
+```
 
 ---
 
